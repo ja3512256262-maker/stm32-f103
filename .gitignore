@@ -1,0 +1,31 @@
+# ===== Keil MDK 编译产物(每次编译都变,不能传)=====
+Objects/
+Listings/
+*.o
+*.crf
+*.d
+*.dep
+*.axf
+*.hex
+*.bin
+*.lst
+*.map
+*.htm
+*.lnp
+*.iex
+*.sct
+*.uvguix.*
+*.scvd
+
+# ===== EIDE / VS Code 编译输出 =====
+build/
+.vscode/ipch/
+
+# ===== 临时日志(调试时自动生成)=====
+*_log.txt
+*_now*.txt
+
+# ===== 系统垃圾文件 =====
+Thumbs.db
+desktop.ini
+.DS_Store

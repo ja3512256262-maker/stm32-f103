@@ -1,0 +1,12 @@
+{
+  "EIDE.ARM.ARMCC5.InstallDirectory": "D:\\Keil_v5\\ARM\\Arm_Compiler_5.06u7",
+  "EIDE.OpenOCD.ExePath": "C:\\Users\\curry\\.eide\\tools\\openocd\\bin\\openocd.exe",
+  "files.encoding": "gb2312",
+  "files.autoGuessEncoding": true,
+  "EIDE.Option.UseTaskToBuild": false,
+  "EIDE.Option.SilentWhenBuildOrFlash": false,
+  "EIDE.Option.ShowToolbarInEditerTitle": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
+}

@@ -1,0 +1,89 @@
+version: "4.1"
+name: STM32F103_Template
+type: ARM
+deviceName: STM32F103C8
+packDir: null
+srcDirs:
+  - user
+  - my_lib
+  - startup
+  - std_periph_driver/src
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  lastBuildTime: 0
+  uid: 7f3a91c0d84b4e2a9c1f5b6d0e7a3c42
+targets:
+  Debug:
+    cppPreprocessAttrs:
+      defineList:
+        - STM32F10X_MD
+        - USE_STDPERIPH_DRIVER
+      incList:
+        - std_periph_driver/inc
+        - user
+        - my_lib
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M3
+        floatingPointHardware: default
+        options:
+          version: 5
+          afterBuildTasks: []
+          asm-compiler:
+            thumb-mode: true
+            use-microLIB: true
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: ""
+            C_FLAGS: ""
+            c99-mode: true
+            gnu-extensions: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            use-microLIB: true
+            warnings: all-warnings
+          global:
+            big-endian: "false"
+            microcontroller-cpu: cortex-m3
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            output-debug-info: enable
+            use-microLIB: true
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: "1"
+              mem:
+                size: "0x5000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: "1"
+              isStartup: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x08000000"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: stlink
+        target: stm32f1x
+    uploader: OpenOCD

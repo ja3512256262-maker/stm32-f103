@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build (ARMCC5 / unify_builder)",
+            "type": "process",
+            "command": "C:\\Users\\curry\\.vscode\\extensions\\cl.eide-3.27.2\\res\\tools\\win32\\unify_builder\\unify_builder.exe",
+            "args": [
+                "-p",
+                "${workspaceFolder}\\build\\Debug\\builder.params",
+                "--rebuild"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "DOTNET_ROLL_FORWARD": "Major"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "echo": true,
+                "focus": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Flash (OpenOCD / ST-Link)",
+            "type": "process",
+            "command": "C:\\Users\\curry\\.eide\\tools\\openocd\\bin\\openocd.exe",
+            "args": [
+                "-f",
+                "interface/stlink.cfg",
+                "-f",
+                "target/stm32f1x.cfg",
+                "-c",
+                "program D:/STM32/STM32F103_Template/build/Debug/STM32F103_Template.hex verify reset exit"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "echo": true,
+                "focus": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
